@@ -117,7 +117,7 @@ strong {
 
 
 h1, h2, h3 {
-	color: #527bbd;
+	color: #1a52ad;
 	margin-top: 0.7em;
 	margin-bottom: 0.3em;
 	padding-bottom: 0.2em;
@@ -189,7 +189,7 @@ dl {
 }
 
 dd {
-	color: #222222;
+	color: #160e0e;
 }
 
 dd > *:first-child {
