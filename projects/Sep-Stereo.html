@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Stereophonic audio is an indispensable ingredient to enhance human auditory experience. Recent research has explored the usage of visual information as guidance to generate binaural or ambisonic audio from mono ones with stereo supervision.
+However, this fully supervised paradigm suffers from an inherent drawback that the recording of stereophonic audio usually requires delicate devices which are expensive for wide accessibility.
+To overcome such challenges, we propose to leverage the vastly available mono audio data to facilitate the generation of stereophonic audio. Our key observation is that the task of visually indicated audio separation also maps independent audios to their corresponding visual positions, which shares a similar objective with stereophonic audio generation.
+We integrate both stereo generation and source separation into a unified framework, , by considering source separation as a particular type of audio spatialization.
+Specifically, a novel associative pyramid network is carefully designed for audio-visual feature fusion. Extensive experiments demonstrate that our framework can improve the stereophonic audio generation results, while performing accurate sound separation with a single model.">
+<meta name="keywords" content="Stereophonic audio generation; Audio source separation; Deep learning;">
+<link rel="author" href="https://hangz-nju-cuhk.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./Sep-Stereo/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./Sep-Stereo/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./Sep-Stereo/iconize.css">
+<script async="" src="./Sep-Stereo/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+	<h1>Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation</h1>
+
+	<div class="authors">
+    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou*</a></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://sheldontsui.github.io/">Xudong Xu*</a></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="http://dahua.me/">Dahua Lin</a></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="http://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://liuziwei7.github.io/">Ziwei Liu</a></sup>
+	</div>
+
+	<div class="affiliations">
+
+    <a href="http://mmlab.ie.cuhk.edu.hk/">Multimedia Laboratory, </a> <a href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+	<div class="venue">European Conference on Computer Vision (<a href="https://eccv2020.eu/" target="_blank">ECCV</a>) 2020 </div>
+      </div>
+
+      <center><img src="./Sep-Stereo/pipeline.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>
+    Stereophonic audio is an indispensable ingredient to enhance human auditory experience. Recent research has explored the usage of visual information as guidance to generate binaural or ambisonic audio from mono ones with stereo supervision.
+However, this fully supervised paradigm suffers from an inherent drawback that the recording of stereophonic audio usually requires delicate devices which are expensive for wide accessibility.
+To overcome such challenges, we propose to leverage the vastly available mono audio data to facilitate the generation of stereophonic audio. Our key observation is that the task of visually indicated audio separation also maps independent audios to their corresponding visual positions, which shares a similar objective with stereophonic audio generation.
+We integrate both stereo generation and source separation into a unified framework, , by considering source separation as a particular type of audio spatialization. Specifically, a novel associative pyramid network is carefully designed for audio-visual feature fusion. Extensive experiments demonstrate that our framework can improve the stereophonic audio generation results, while performing accurate sound separation with a single model.
+	</p>
+      </div>
+
+<div class="section demo">
+	<h2>Demo Video</h2>
+	<br>
+	<center>
+	  <iframe width="810" height="480" src="https://www.youtube.com/embed/2C8s_YuRRxk" frameborder="0" allowfullscreen></iframe>
+	</video>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section materials">
+	<h2>Materials</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="" target="_blank" class="imageLink"><img src="./Sep-Stereo/paper.png"></a><br>
+		  <a href="" target="_blank">Paper</a>
+		</div>
+	      </li>
+
+	      <li class="grid">
+	      <div class="griditem">
+		<a href="" target="_blank" class="imageLink"><img src="./Sep-Stereo/poster.png"></a><br>
+		  <a href="" target="_blank">Poster</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section code">
+	<h2>Code and Models</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="https://github.com/Hangz-nju-cuhk/" target="_blank" class="imageLink"><img src="./Sep-Stereo/code.png"></a><br>
+		  <a href="https://github.com/Hangz-nju-cuhk/" target="_blank">Code and Models</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+
+<br>
+
+<div class="section citation">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+	  <pre>
+@inproceedings{zhou2020sep,
+  title={Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation},
+  author={Zhou, Hang and Xu, Xudong and Lin, Dahua and Wang, Xiaogang and  Liu, Ziwei},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2020}
+}</pre>
+<br>
+
+	  </div>
+      </div>
+
+</body></html>
