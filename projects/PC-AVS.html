@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="While accurate lip synchronization has been achieved for arbitrary-subject audio-driven talking face generation, the problem of how to efficiently drive the head pose remains.
+Previous methods rely on pre-estimated structural information such as landmarks and 3D parameters, aiming to generate personalized rhythmic movements.
+However, inaccuracy of such estimated information under extreme conditions would lead to degradation problems.
+In this paper, we propose a clean yet effective framework to generate pose-controllable talking faces.
+We operate on non-aligned raw face images, using only a single photo as identity reference.
+The key is to modularize audio-visual representations by devising an implicit low-dimension pose code.
+Substantially, both speech content and head pose information lie in a joint non-identity embedding space. While speech content information can be defined by learning the intrinsic synchronization between audio-visual modalities, we identify that a pose code
+will be complementarily learned in a modulated convolution-based reconstruction framework.
+
+Extensive experiments show that our method generates accurately lip-synced talking faces whose poses are controllable by other videos. Moreover, our model has multiple advanced capabilities including extreme view robustness and talking face frontalization.">
+<meta name="keywords" content="Talking Face Generation; Audio-Visual Representation Learning; Deep learning;">
+<link rel="author" href="https://hangz-nju-cuhk.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./Sep-Stereo/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./Sep-Stereo/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./Sep-Stereo/iconize.css">
+<script async="" src="./Sep-Stereo/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+	<h1>Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation</h1>
+
+	<div class="authors">
+    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  Yasheng Sun<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://wywu.github.io/">Wayne Wu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="http://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>4</sup>
+	</div>
+
+	<div class="affiliations">
+
+  1. <a href="http://mmlab.ie.cuhk.edu.hk/">Multimedia Laboratory, </a> <a href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  2. <a href="https://www.titech.ac.jp/english/">Tokyo Institute of Technology </a>
+  <br>
+  3. <a href="https://www.sensetime.com/en">SenseTime Research </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  4. <a href="https://www.ntu.edu.sg/Pages/home.aspx">S-Lab, Nanyang Technological University </a>
+  </div>
+
+	<div class="venue">IEEE Conference on Computer Vision and Pattern Recognition (<a href="http://cvpr2021.thecvf.com/" target="_blank">CVPR</a>) 2021 </div>
+      </div>
+
+      <center><img src="./PC-AVS/PC-AVS.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>
+    While accurate lip synchronization has been achieved for arbitrary-subject audio-driven talking face generation, the problem of how to efficiently drive the head pose remains.
+    Previous methods rely on pre-estimated structural information such as landmarks and 3D parameters, aiming to generate personalized rhythmic movements.
+    However, inaccuracy of such estimated information under extreme conditions would lead to degradation problems.
+    In this paper, we propose a clean yet effective framework to generate pose-controllable talking faces.
+    We operate on non-aligned raw face images, using only a single photo as identity reference.
+    The key is to modularize audio-visual representations by devising an implicit low-dimension pose code.
+    Substantially, both speech content and head pose information lie in a joint non-identity embedding space. While speech content information can be defined by learning the intrinsic synchronization between audio-visual modalities, we identify that a pose code
+    will be complementarily learned in a modulated convolution-based reconstruction framework.
+	</p>
+      </div>
+
+<div class="section demo">
+	<h2>Demo Video</h2>
+	<br>
+	<center>
+	  <iframe width="640" height="360" src="https://www.youtube.com/embed/njn7ctayUcI" frameborder="0" allowfullscreen></iframe>
+	</video>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section materials">
+	<h2>Materials</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="" target="_blank" class="imageLink"><img src="./PC-AVS/paper.png"></a><br>
+		  <a href="" target="_blank">Paper</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section code">
+	<h2>Code and Models</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank" class="imageLink"><img src="./Sep-Stereo/code.png"></a><br>
+		  <a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank">Code and Models</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+
+<br>
+
+<div class="section citation">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+	  <pre>
+@inproceedings{zhou2020pose,
+  title = {Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation},
+  author = {Zhou, Hang and Sun, Yasheng and Wu, Wayne and Loy, Chen Change and Wang, Xiaogang and Liu, Ziwei},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2021}
+}</pre>
+<br>
+
+	  </div>
+      </div>
+
+</body></html>
