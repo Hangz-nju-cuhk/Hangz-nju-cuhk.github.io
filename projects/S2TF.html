@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="keywords" content="Talking Face Generation; Audio-Visual Representation Learning; Deep learning;">
+<link rel="author" href="https://hangz-nju-cuhk.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./PC-AVS/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./Sep-Stereo/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./Sep-Stereo/iconize.css">
+<script async="" src="./Sep-Stereo/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+	<h1>Speech2Talking-Face: Inferring and Driving a Face with Synchronized Audio-Visual Representation</h1>
+
+	<div class="authors">
+    Yasheng Sun*<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou*</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://www.vogue.cs.titech.ac.jp/koike">Hideki Koike</a><sup>1</sup>
+	</div>
+
+	<div class="affiliations">
+  1. <a href="https://www.titech.ac.jp/english/">Tokyo Institute of Technology </a>
+    <br>
+  2. <a href="http://mmlab.ie.cuhk.edu.hk/">Multimedia Laboratory, </a> <a href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <br>
+  3. <a href="https://www.ntu.edu.sg/Pages/home.aspx">S-Lab, Nanyang Technological University </a>
+  </div>
+
+	<div class="venue">International Joint Conference on Artificial Intelligence (<a href="https://ijcai-21.org/" target="_blank">IJCAI</a>) 2021 </div>
+      </div>
+
+      <center><img src="./S2TF/S2TF.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>
+    What can we picture solely from a clip of speech? Previous research has shown the possibility of directly inferring the appearance of a person's face by listening to a voice. However, within human speech lies not only the biometric identity signal but also the identity-irrelevant information such as the speech content. Our goal is to extract such information from a clip of speech. In particular, we aim at not only inferring the face of a person but also animating it. Our key insight is to synchronize audio and visual representations from two perspectives in a style-based generative framework.
+Specifically, contrastive learning is leveraged to map both the identity and speech content information within audios to visual representation spaces. Furthermore, the identity space is strengthened with class centroids.
+Through curriculum learning, the style-based generator is capable of automatically balancing the information from the two latent spaces.
+Extensive experiments show that our approach encourages better speech-identity correlation learning while generating vivid faces whose identities are consistent with given speech samples. Moreover, the same model enables these inferred faces to talk driven by the audios.
+	</p>
+      </div>
+
+<div class="section demo">
+	<h2>Demo Video</h2>
+	<br>
+	<center>
+	  <iframe width="640" height="360" src="https://www.youtube.com/embed/lNQQHIggnUg" frameborder="0" allowfullscreen></iframe>
+	</video>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section materials">
+	<h2>Materials</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="" target="_blank" class="imageLink"><img src="./S2TF/paper.png"></a><br>
+		  <a href="" target="_blank">Paper</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section code">
+	<h2>Code and Models</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank" class="imageLink"><img src="./Sep-Stereo/code.png"></a><br>
+		  <a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank">Code and Models</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+
+<br>
+
+<div class="section citation">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+	  <pre>
+@inproceedings{sun2021speech,
+  title = {Speech2Talking-Face: Inferring and Driving a Face with Synchronized Audio-Visual Representation},
+  author = {Sun, Yasheng and Zhou, Hang and Liu, Ziwei and Koike, Hideki},
+  booktitle = {International Joint Conference on Artificial Intelligence (IJCAI) 2021},
+  year = {2021}
+}</pre>
+<br>
+
+	  </div>
+      </div>
+
+</body></html>
