@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StyleSwap: Style-Based Generator Empowers Robust Face Swapping</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Numerous attempts have been made to the task of personagnostic face swapping given its wide applications. While existing methods mostly rely on tedious network and loss designs, they still struggle
+in the information balancing between the source and target faces, and
+tend to produce visible artifacts. In this work, we introduce a concise and
+effective framework named StyleSwap. Our core idea is to leverage a
+style-based generator to empower high-fidelity and robust face swapping,
+thus the generator’s advantage can be adopted for optimizing identity
+similarity. We identify that with only minimal modifications, a StyleGAN2 architecture can successfully handle the desired information from
+both source and target. Additionally, inspired by the ToRGB layers, a
+Swapping-Driven Mask Branch is further devised to improve information blending. Furthermore, the advantage of StyleGAN inversion can
+be adopted. Particularly, a Swapping-Guided ID Inversion strategy is
+proposed to optimize identity similarity. Extensive experiments validate
+that our framework generates high-quality face swapping results that outperform state-of-the-art methods both qualitatively and quantitatively.
+">
+<meta name="keywords" content="Face Swapping; Deep learning;">
+<link rel="author" href="https://hangz-nju-cuhk.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./AV-CAT/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./AV-CAT/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./AV-CAT/iconize.css">
+<script async="" src="./AV-CAT/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+	<h1>Masked Lip-Sync Prediction by Audio-Visual
+		<br>
+		Contextual Exploitation in Transformers</h1>
+
+	<div class="authors">
+	<a href="https://scholar.google.com/citations?user=Vrq1yOEAAAAJ">Yasheng Sun</a><sup>1*</sup>&nbsp;&nbsp;
+    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou</a><sup>2*</sup>&nbsp;&nbsp;
+		Kaisiyuan Wang<sup>3</sup>&nbsp;&nbsp;
+		<a href="https://wuqianyi.top/">Qianyi Wu</a><sup>4</sup>&nbsp;&nbsp;
+
+	<a href="https://scholar.google.com.au/citations?user=9IIxWBsAAAAJ">Zhibin Hong</a><sup>2</sup>&nbsp;&nbsp;
+
+
+	<br>
+
+	<a href="https://scholar.google.com/citations?user=tVV3jmcAAAAJ">Jingtuo Liu<sup>2</sup>&nbsp;&nbsp;
+	<a href="https://scholar.google.com/citations?user=1wzEtxcAAAAJ">Errui Ding</a><sup>2</sup>&nbsp;&nbsp;
+	<a href="https://jingdongwang2017.github.io/">Jingdong Wang</a><sup>2</sup>&nbsp;&nbsp;
+		<a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>5</sup>&nbsp;&nbsp;
+		<a href="https://www.vogue.cs.titech.ac.jp/koike">Koike Hideki</a><sup>1</sup>
+
+	</div>
+
+	<div class="affiliations">
+	1. 	Tokyo Institute of Technology.
+  2. Department of Computer Vision Technology (VIS), Baidu Inc.,
+		<br>
+		3. The University of Sydney.
+		4. Monash University.
+  5. S-Lab, Nanyang Technological University.
+  </div>
+
+	<div class="venue"> <a href="https://sa2022.siggraph.org/en/" target="_blank">SIGGRAPH Asia</a> 2022 (Conference Proceedings) </div>
+      </div>
+
+      <center><img src="./AV-CAT/AV-CAT.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>
+   Previous studies have explored generating accurately lip-synced talking faces for arbitrary targets given audio conditions. However, most of them deform or generate the whole facial area, leading to non-realistic results. In this work, we delve into the formulation of altering only the mouth shapes of the target person.
+		This requires masking a large percentage of the original image and seamlessly inpainting it with the aid of audio and reference frames. To this end, we propose the Audio-Visual Context-Aware Transformer (AV-CAT) framework, which produces accurate lip-sync with photo-realistic quality by predicting the masked mouth shapes.
+		Our key insight is to exploit desired contextual information provided in audio and visual modalities thoroughly with delicately designed Transformers. Specifically, we propose a convolution-Transformer hybrid backbone and design an attention-based fusion strategy for filling the masked parts.
+		It uniformly attends to the textural information on the unmasked regions and the reference frame. Then the semantic audio information is involved in enhancing the self-attention computation. Additionally, a refinement network with audio injection improves both image and lip-sync quality.
+		Extensive experiments validate that our model can generate high-fidelity lip-synced results for arbitrary subjects.
+	</p>
+      </div>
+
+<div class="section demo">
+	<h2>Demo Video</h2>
+	<br>
+	<center>
+	  <iframe width="640" height="360" src="https://www.youtube.com/embed/bsHhzU8VSLo" frameborder="0" allowfullscreen></iframe>
+	</video>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section materials">
+	<h2>Materials</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="https://dl.acm.org/doi/pdf/10.1145/3550469.3555393" target="_blank" class="imageLink"><img src="./AV-CAT/paper.png"></a><br>
+		  <a href="https://dl.acm.org/doi/pdf/10.1145/3550469.3555393" target="_blank">Paper</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+
+
+<br>
+
+<div class="section citation">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+	  <pre>
+@inproceedings{sun2022masked,
+author = {Sun, Yasheng and Zhou, Hang and Wang, Kaisiyuan and Wu, Qianyi and Hong, Zhibin and Liu, Jingtuo and Ding, Errui and Wang, Jingdong and Liu, Ziwei and Hideki, Koike},
+title = {Masked Lip-Sync Prediction by Audio-Visual Contextual Exploitation in Transformers},
+year = {2022},
+series = {SA '22 Conference Papers}
+}
+}</pre>
+<br>
+
+	  </div>
+      </div>
+
+</body></html>
