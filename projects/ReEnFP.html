@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ReEnFP: Detail-Preserving Face Reconstruction by Encoding Facial Priors</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="
+">
+<meta name="keywords" content="Face Reconstruction; Deep learning;">
+<link rel="author" href="https://hangz-nju-cuhk.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./REENFP/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./AV-CAT/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./AV-CAT/iconize.css">
+<script async="" src="./REENFP/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+	<h1>ReEnFP: Detail-Preserving Face Reconstruction
+		<br>
+		by Encoding Facial Priors</h1>
+
+	<div class="authors">
+	<a href="https://scholar.google.com/citations?user=Vrq1yOEAAAAJ">Yasheng Sun</a><sup>1</sup>&nbsp;&nbsp;
+	<a href="https://hangz-nju-cuhk.github.io/">Jiangke Lin</a><sup>2</sup>&nbsp;&nbsp;
+    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou</a><sup>3</sup>&nbsp;&nbsp;
+    <a href="https://seanseattle.github.io/">Zhiliang Xu</a><sup>3</sup>&nbsp;&nbsp;
+	<a href="https://scholar.google.com/citations?user=ui6DYGoAAAAJ&hl=en">Dongliang He</a><sup>3</sup>&nbsp;&nbsp;
+		<a href="https://www.vogue.cs.titech.ac.jp/koike">Koike Hideki</a><sup>1</sup>
+
+	</div>
+
+	<div class="affiliations">
+	1. 	Tokyo Institute of Technology.
+		2. Zhejiang University.
+  3. Department of Computer Vision Technology (VIS), Baidu Inc.,
+
+  </div>
+
+	<div class="venue"> <a href="https://wacv2023.thecvf.com/home" target="_blank">WACV 2023</a> </div>
+      </div>
+
+      <center><img src="./REENFP/REENFP.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>
+We address the problem of face modeling, which is still challenging in achieving high-quality reconstruction results efficiently. Neither previous regression-based nor optimization-based frameworks could well balance between the facial reconstruction fidelity and efficiency.
+		We notice that the large amount of in-the-wild facial images contain diverse appearance information, however, their underlying knowledge is not fully exploited for face modeling.
+		To this end, we propose our Reconstruction by Encoding Facial Priors (ReEnFP) pipeline to exploit the potential of unconstrained facial images for further improvement.
+		Our key is to encode generative priors learned by a style-based texture generator on unconstrained data for fast and detail-preserving face reconstruction. With our texture generator pre-trained using a differentiable renderer, faces could be encoded to its latent space as opposed to the time-consuming optimization-based inversion.
+		Our generative prior encoding is further enhanced with a pyramid fusion block for adaptive integration of input spatial information. Extensive experiments show that our method reconstructs photo-realistic facial textures and geometric details with precise identity recovery.
+	</p>
+      </div>
+
+<div class="section demo">
+	<h2>Demo Video</h2>
+	<br>
+	<center>
+	  <iframe width="640" height="360" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+	</video>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section materials">
+	<h2>Materials</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="https://openaccess.thecvf.com/content/WACV2023/papers/Sun_ReEnFP_Detail-Preserving_Face_Reconstruction_by_Encoding_Facial_Priors_WACV_2023_paper.pdf" target="_blank" class="imageLink"><img src="./AV-CAT/paper.png"></a><br>
+		  <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Sun_ReEnFP_Detail-Preserving_Face_Reconstruction_by_Encoding_Facial_Priors_WACV_2023_paper.pdf" target="_blank">Paper</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+
+
+<br>
+
+<div class="section citation">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+	  <pre>
+@InProceedings{Sun_2023_WACV,
+    author    = {Sun, Yasheng and Lin, Jiangke and Zhou, Hang and Xu, Zhiliang and He, Dongliang and Koike, Hideki},
+    title     = {ReEnFP: Detail-Preserving Face Reconstruction by Encoding Facial Priors},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2023},
+    pages     = {6118-6128}
+}
+}</pre>
+<br>
+
+	  </div>
+      </div>
+
+</body></html>
