@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Make Your Brief Stroke Real and Stereoscopic: 3D-Aware Simplified Sketch to Portrait Generation</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="keywords" content="Virtual Character Creation, Computer Vision, Cross-Modal Generation">
+<link rel="author" href="https://hangz-nju-cuhk.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./PC-AVS/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./Sep-Stereo/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./Sep-Stereo/iconize.css">
+<script async="" src="./Sep-Stereo/prettify.js"></script>
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+
+      <div class="section head">
+	<h1>Speech2Talking-Face: Inferring and Driving a Face with Synchronized Audio-Visual Representation</h1>
+
+	<div class="authors">
+    Yasheng Sun*<sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	<a href="https://wuqianyi.top/">Qianyi Wu*</a><sup>2</sup>
+		<a href="https://hangz-nju-cuhk.github.io/">Hang Zhou*</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  	Kaisiyuan Wang<sup>4</sup>
+		Tianshu Hu<sup>3</sup>
+		Chen-Chieh Liao<sup>1</sup>
+		<a href="https://scholar.google.com/citations?user=ui6DYGoAAAAJ&hl=en">Dongliang He</a><sup>3</sup>
+		<a href="https://scholar.google.com/citations?user=tVV3jmcAAAAJ&hl=en">Jingtuo Liu</a><sup>3</sup>
+		<a href="https://scholar.google.com/citations?user=1wzEtxcAAAAJ&hl=zh-CN">Errui Ding</a><sup>3</sup>
+		<a href="https://jingdongwang2017.github.io/">Jingdong Wang</a><sup>3</sup>
+		<a href="https://scholar.google.com/citations?user=SuyJiqEAAAAJ&hl=ja">Shio Miyafuji</a><sup>1</sup>
+		<a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://www.vogue.cs.titech.ac.jp/koike">Hideki Koike</a><sup>1</sup>
+	</div>
+
+	<div class="affiliations">
+  1. <a href="https://www.titech.ac.jp/english/">Tokyo Institute of Technology </a><br>
+		2. <a href="https://www.monash.edu/">Monash University</a></br>
+		3. Baidu Inc.<br>
+		4. <a href="https://www.sydney.edu.au/">The University of Sydney</a></br>
+		5. <a href="https://www.ntu.edu.sg/Pages/home.aspx">S-Lab, Nanyang Technological University </a>
+  </div>
+
+
+      <center><img src="./SSSP/SSSP.png" border="0" width="90%"></center>
+
+<div class="section abstract">
+	<h2>Abstract</h2>
+	<br>
+	<p>
+    Creating the photo-realistic version of people sketched portraits is useful to various entertainment purposes. Existing studies only generate portraits in the 2D plane with fixed views, making the results less vivid. In this paper, we present Stereoscopic Simplified Sketch-to-Portrait (SSSP), which explores the possibility of creating Stereoscopic 3D-aware portraits from simple contour sketches by involving 3D generative models. Our key insight is to design sketch-aware constraints that can fully exploit the prior knowledge of a tri-plane-based 3D-aware generative model. Specifically, our designed region-aware volume rendering strategy and global consistency constraint further enhance detail correspondences during sketch encoding. Moreover, in order to facilitate the usage of layman users, we propose a Contour-to-Sketch module with vector quantized representations, so that easily drawn contours can directly guide the generation of 3D portraits. Extensive comparisons show that our method generates high-quality results that match the sketch. Our usability study verifies that our system is greatly preferred by user.
+	</p>
+      </div>
+
+<div class="section demo">
+	<h2>Demo Video</h2>
+	<br>
+	<center>
+	  <iframe width="640" height="360" src="https://www.youtube.com/embed/tAnSpeUrmR8" frameborder="0" allowfullscreen></iframe>
+	</video>
+	    </center>
+	    </div>
+
+<br>
+
+<div class="section materials">
+	<h2>Materials</h2>
+	<center>
+	  <ul>
+
+          <li class="grid">
+	      <div class="griditem">
+		<a href="https://arxiv.org/pdf/2302.06857v1.pdf" target="_blank" class="imageLink"><img src="./S2TF/paper.png"></a><br>
+		  <a href="https://arxiv.org/pdf/2302.06857v1.pdf" target="_blank">Paper</a>
+		</div>
+	      </li>
+
+	    </ul>
+	    </center>
+	    </div>
+
+<br>
+
+<!--<div class="section code">-->
+<!--	<h2>Code and Models</h2>-->
+<!--	<center>-->
+<!--	  <ul>-->
+
+<!--          <li class="grid">-->
+<!--	      <div class="griditem">-->
+<!--		<a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank" class="imageLink"><img src="./Sep-Stereo/code.png"></a><br>-->
+<!--		  <a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank">Code and Models</a>-->
+<!--		</div>-->
+<!--	      </li>-->
+
+<!--	    </ul>-->
+<!--	    </center>-->
+<!--	    </div>-->
+
+<!--<br>-->
+
+
+<br>
+
+<div class="section citation">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+	  <pre>
+@misc{https://doi.org/10.48550/arxiv.2302.06857,
+  doi = {10.48550/ARXIV.2302.06857},
+  url = {https://arxiv.org/abs/2302.06857},
+  author = {Sun, Yasheng and Wu, Qianyi and Zhou, Hang and Wang, Kaisiyuan and Hu, Tianshu and Liao, Chen-Chieh and He, Dongliang and Liu, Jingtuo and Ding, Errui and Wang, Jingdong and Miyafuji, Shio and Liu, Ziwei and Koike, Hideki},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Make Your Brief Stroke Real and Stereoscopic: 3D-Aware Simplified Sketch to Portrait Generation},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {Creative Commons Attribution 4.0 International}
+}</pre>
+<br>
+
+	  </div>
+      </div>
+
+</body></html>
