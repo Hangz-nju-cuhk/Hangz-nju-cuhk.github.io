@@ -1,30 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>StyleSwap: Style-Based Generator Empowers Robust Face Swapping</title>
+<title>StyleSync: High-Fidelity Generalized and Personalized Lip Sync in Style-based Generator</title>
 
 <!-- Meta tags for search engines to crawl -->
 <meta name="robots" content="index,follow">
-<meta name="description" content="Numerous attempts have been made to the task of personagnostic face swapping given its wide applications. While existing methods mostly rely on tedious network and loss designs, they still struggle
-in the information balancing between the source and target faces, and
-tend to produce visible artifacts. In this work, we introduce a concise and
-effective framework named StyleSwap. Our core idea is to leverage a
-style-based generator to empower high-fidelity and robust face swapping,
-thus the generator’s advantage can be adopted for optimizing identity
-similarity. We identify that with only minimal modifications, a StyleGAN2 architecture can successfully handle the desired information from
-both source and target. Additionally, inspired by the ToRGB layers, a
-Swapping-Driven Mask Branch is further devised to improve information blending. Furthermore, the advantage of StyleGAN inversion can
-be adopted. Particularly, a Swapping-Guided ID Inversion strategy is
-proposed to optimize identity similarity. Extensive experiments validate
-that our framework generates high-quality face swapping results that outperform state-of-the-art methods both qualitatively and quantitatively.
+<meta name="description" content="
+Despite recent advances in syncing lip movements with any audio waves, current methods still struggle to balance generation quality and the model's generalization ability.
+Previous studies either require long-term data for training or produce a similar movement pattern on all subjects with low quality.
+In this paper, we propose StyleSync, an effective framework that enables high-fidelity lip synchronization. We identify that a style-based generator would sufficiently enable such a charming property on both one-shot and few-shot scenarios.
+Specifically, we design a mask-guided spatial information encoding module that preserves the details of the given face. The mouth shapes are accurately modified by audio through modulated convolutions.
+Moreover, our design also enables personalized lip-sync by introducing style space and generator refinement on only limited frames. Thus the identity and talking style of a target person could be accurately preserved.
+Extensive experiments demonstrate the effectiveness of our method in producing high-fidelity results on a variety of scenes.
 ">
-<meta name="keywords" content="Face Swapping; Deep learning;">
+<meta name="keywords" content="Lip Sync; Talking Face Generation; Deep learning;">
 <link rel="author" href="https://hangz-nju-cuhk.github.io/">
 
 <!-- Fonts and stuff -->
-<link href="./StyleSwap/css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="./StyleSwap/project.css" media="screen">
-<link rel="stylesheet" type="text/css" media="screen" href="./StyleSwap/iconize.css">
-<script async="" src="./StyleSwap/prettify.js"></script>
+<link href="./StyleSync/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./StyleSync/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./StyleSync/iconize.css">
+<script async="" src="./StyleSync/prettify.js"></script>
 
 
 </head>
@@ -34,60 +29,57 @@ that our framework generates high-quality face swapping results that outperform 
     <div id="content-inner">
 
       <div class="section head">
-	<h1>StyleSwap: Style-Based Generator Empowers
-		<br>
-		Robust Face Swapping</h1>
+	<h1>StyleSync: High-Fidelity Generalized and Personalized <br>
+		Lip Sync in Style-based Generator</h1>
 
 	<div class="authors">
-	<a href="https://seanseattle.github.io/">Zhiliang Xu</a><sup>1*</sup>&nbsp;&nbsp;
-    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou</a><sup>1*†</sup>&nbsp;&nbsp;
-	<a href="https://scholar.google.com.au/citations?user=9IIxWBsAAAAJ">Zhibin Hong</a><sup>1</sup>&nbsp;&nbsp;
-		<a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>2</sup>&nbsp;&nbsp;
-	<a href="https://jmliu88.github.io/">Jiaming Liu</a><sup>1</sup>&nbsp;&nbsp;
+		Jiazhi Guan<sup>1,2*</sup>&nbsp;&nbsp;
+		Zhanwang Zhang<sup>1*</sup>&nbsp;&nbsp;
+    <a href="https://hangz-nju-cuhk.github.io/">Hang Zhou</a><sup>1†</sup>&nbsp;&nbsp;
+	<a href="https://scholar.google.com/citations?user=BIixVT0AAAAJ">Tianshu Hu</a><sup>1†</sup>&nbsp;&nbsp;
+		<a href="https://scholar.google.com/citations?user=2Pedf3EAAAAJ">Kaisiyuan Wang</a><sup>3</sup>&nbsp;&nbsp;
 
 	<br>
-	Zhizhi Guo<sup>1</sup>&nbsp;&nbsp;
-	Junyu Han<sup>1</sup>&nbsp;&nbsp;
+		<a href="https://scholar.google.com/citations?user=ui6DYGoAAAAJ">Dongliang He</a><sup>2</sup>&nbsp;&nbsp;
+		Haocheng Feng<sup>1</sup>&nbsp;&nbsp;
 	<a href="https://scholar.google.com/citations?user=tVV3jmcAAAAJ">Jingtuo Liu<sup>1</sup>&nbsp;&nbsp;
 	<a href="https://scholar.google.com/citations?user=1wzEtxcAAAAJ">Errui Ding</a><sup>1</sup>&nbsp;&nbsp;
+				<a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>4</sup>&nbsp;&nbsp;
 	<a href="https://jingdongwang2017.github.io/">Jingdong Wang</a><sup>1</sup>
 	</div>
 
 	<div class="affiliations">
 
   1. Department of Computer Vision Technology (VIS), Baidu Inc.,
-  2. S-Lab, Nanyang Technological University.
+		2. Tsinghua University,
+			<br>
+		3. The University of Sydney,
+  4. S-Lab, Nanyang Technological University.
   </div>
 
-	<div class="venue">European Conference on Computer Vision (<a href="https://eccv2022.ecva.net/" target="_blank">ECCV</a>) 2022 </div>
+	<div class="venue">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<a href="https://cvpr2023.thecvf.com/" target="_blank">CVPR</a>) 2023 </div>
       </div>
 
-      <center><img src="./StyleSwap/StyleSwap.png" border="0" width="90%"></center>
+      <center><img src="./StyleSync/StyleSync.png" border="0" width="90%"></center>
 
 <div class="section abstract">
 	<h2>Abstract</h2>
 	<br>
 	<p>
-   Numerous attempts have been made to the task of personagnostic face swapping given its wide applications. While existing methods mostly rely on tedious network and loss designs, they still struggle
-in the information balancing between the source and target faces, and
-tend to produce visible artifacts. In this work, we introduce a concise and
-effective framework named StyleSwap. Our core idea is to leverage a
-style-based generator to empower high-fidelity and robust face swapping,
-thus the generator’s advantage can be adopted for optimizing identity
-similarity. We identify that with only minimal modifications, a StyleGAN2 architecture can successfully handle the desired information from
-both source and target. Additionally, inspired by the ToRGB layers, a
-Swapping-Driven Mask Branch is further devised to improve information blending. Furthermore, the advantage of StyleGAN inversion can
-be adopted. Particularly, a Swapping-Guided ID Inversion strategy is
-proposed to optimize identity similarity. Extensive experiments validate
-that our framework generates high-quality face swapping results that outperform state-of-the-art methods both qualitatively and quantitatively.
-	</p>
+Despite recent advances in syncing lip movements with any audio waves, current methods still struggle to balance generation quality and the model's generalization ability.
+Previous studies either require long-term data for training or produce a similar movement pattern on all subjects with low quality.
+In this paper, we propose StyleSync, an effective framework that enables high-fidelity lip synchronization. We identify that a style-based generator would sufficiently enable such a charming property on both one-shot and few-shot scenarios.
+Specifically, we design a mask-guided spatial information encoding module that preserves the details of the given face. The mouth shapes are accurately modified by audio through modulated convolutions.
+Moreover, our design also enables personalized lip-sync by introducing style space and generator refinement on only limited frames. Thus the identity and talking style of a target person could be accurately preserved.
+Extensive experiments demonstrate the effectiveness of our method in producing high-fidelity results on a variety of scenes.
+</p>
       </div>
 
 <div class="section demo">
 	<h2>Demo Video</h2>
 	<br>
 	<center>
-	  <iframe width="640" height="360" src="https://www.youtube.com/embed/bsHhzU8VSLo" frameborder="0" allowfullscreen></iframe>
+	  <iframe width="640" height="360" src="https://www.youtube.com/embed/yAPDl2dVonY" frameborder="0" allowfullscreen></iframe>
 	</video>
 	    </center>
 	    </div>
@@ -101,17 +93,17 @@ that our framework generates high-quality face swapping results that outperform 
 
           <li class="grid">
 	      <div class="griditem">
-		<a href="https://arxiv.org/pdf/2209.13514.pdf" target="_blank" class="imageLink"><img src="./StyleSwap/paper.png"></a><br>
-		  <a href="https://arxiv.org/pdf/2209.13514.pdf" target="_blank">Paper</a>
+		<a href="" target="_blank" class="imageLink"><img src="./StyleSync/paper.png"></a><br>
+		  <a href="" target="_blank">Paper</a>
 		</div>
 	      </li>
 
-		  <li class="grid">
-	      <div class="griditem">
-		<a href="https://drive.google.com/file/d/182roBLw9NChEugMHuLLkmuElifFYhQaq/view" target="_blank" class="imageLink"><img src="./StyleSwap/styleswap-poster.png"></a><br>
-		  <a href="https://drive.google.com/file/d/182roBLw9NChEugMHuLLkmuElifFYhQaq/view" target="_blank">Poster</a>
-		</div>
-	      </li>
+<!--		  <li class="grid">-->
+<!--	      <div class="griditem">-->
+<!--		<a href="https://drive.google.com/file/d/182roBLw9NChEugMHuLLkmuElifFYhQaq/view" target="_blank" class="imageLink"><img src="./StyleSwap/styleswap-poster.png"></a><br>-->
+<!--		  <a href="https://drive.google.com/file/d/182roBLw9NChEugMHuLLkmuElifFYhQaq/view" target="_blank">Poster</a>-->
+<!--		</div>-->
+<!--	      </li>-->
 
 	    </ul>
 	    </center>
@@ -119,23 +111,23 @@ that our framework generates high-quality face swapping results that outperform 
 
 <br>
 
-<div class="section code">
-	<h2>Code and Models</h2>
-	<center>
-	  <ul>
+<!--<div class="section code">-->
+<!--	<h2>Code and Models</h2>-->
+<!--	<center>-->
+<!--	  <ul>-->
 
-          <li class="grid">
-	      <div class="griditem">
-		<a href="https://github.com/Seanseattle/StyleSwap" target="_blank" class="imageLink"><img src="./Heser/code.png"></a><br>
-		  <a href="https://github.com/Seanseattle/StyleSwap" target="_blank">Code and Models</a>
-		</div>
-	      </li>
+<!--          <li class="grid">-->
+<!--	      <div class="griditem">-->
+<!--		<a href="https://github.com/Seanseattle/StyleSwap" target="_blank" class="imageLink"><img src="./Heser/code.png"></a><br>-->
+<!--		  <a href="https://github.com/Seanseattle/StyleSwap" target="_blank">Code and Models</a>-->
+<!--		</div>-->
+<!--	      </li>-->
 
-	    </ul>
-	    </center>
-	    </div>
+<!--	    </ul>-->
+<!--	    </center>-->
+<!--	    </div>-->
 
-<br>
+<!--<br>-->
 
 
 <br>
@@ -144,11 +136,11 @@ that our framework generates high-quality face swapping results that outperform 
 	<h2>Citation</h2>
 	<div class="section bibtex">
 	  <pre>
-@inproceedings{xu2022styleswap,
-  title = {StyleSwap: Style-Based Generator Empowers Robust Face Swapping},
-  author = {Xu, Zhiliang and Zhou, Hang and Hong, Zhibin and Liu, Ziwei and Liu, Jiaming and Guo, Zhizhi and Han, Junyu and Liu, Jingtuo and Ding, Errui and Wang, Jingdong},
-  booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
-  year = {2022}
+@inproceedings{guan2023stylesync,
+  title = {StyleSync: High-Fidelity Generalized and Personalized Lip Sync in Style-based Generator},
+  author = {Guan, Jiazhi and Zhang, Zhanwang and Zhou, Hang and HU, Tianshu and Wang, Kaisiyuan and He, Dongliang and Feng, Haocheng and Liu, Jingtuo and Ding, Errui and Liu, Ziwei and Wang, Jingdong},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2023}
 }</pre>
 <br>
 
